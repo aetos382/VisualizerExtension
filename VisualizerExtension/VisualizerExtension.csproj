@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+
+    <!-- The VisualStudio.Extensibility preview packages are available from the azure-public/vside/msft_consumption feed -->
+    <RestoreAdditionalProjectSources>https://pkgs.dev.azure.com/azure-public/vside/_packaging/msft_consumption/nuget/v3/index.json;$(RestoreAdditionalProjectSources)</RestoreAdditionalProjectSources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Extensibility.Sdk" Version="17.9.1068-preview-2" />
+    <PackageReference Include="Microsoft.VisualStudio.Extensibility.Build" Version="17.9.1068-preview-2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomObjectSource\CustomObjectSource.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="../CustomObjectSource/bin/$(Configuration)/netstandard2.0/CustomObjectSource.dll">
+      <Link>netstandard2.0/CustomObjectSource.dll</Link>
+      <Visible>false</Visible>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="VisualizerDialog.xaml"/>
+    <None Remove="VisualizerDialog.xaml" />
+  </ItemGroup>
+</Project>
