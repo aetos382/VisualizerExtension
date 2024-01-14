@@ -1,11 +1,11 @@
-﻿using System.Threading;
+using System.Threading;
 using System.Threading.Tasks;
-
-using CustomObjectSource;
 
 using Microsoft.VisualStudio.Extensibility;
 using Microsoft.VisualStudio.Extensibility.DebuggerVisualizers;
 using Microsoft.VisualStudio.RpcContracts.RemoteUI;
+
+using CustomObjectSource;
 
 namespace VisualizerExtension;
 
