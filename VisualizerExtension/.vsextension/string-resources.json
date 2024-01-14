@@ -1,4 +1,5 @@
 {
   "GoodVisualizer.Name": "Good Visualizer",
-  "BadVisualizer.Name": "Bad Visualizer"
+  "BadVisualizer.Name": "Bad Visualizer",
+  "SimpleVisualizer.Name": "Simple Visualizer"
 }
