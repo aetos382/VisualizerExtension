@@ -1,4 +1,4 @@
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 
 using Microsoft.VisualStudio.Extensibility;
@@ -10,7 +10,7 @@ using CustomObjectSource;
 namespace VisualizerExtension;
 
 [VisualStudioContribution]
-public class BadVisualizerProvider :
+public sealed class BadVisualizerProvider :
     DebuggerVisualizerProvider
 {
     public override Task<IRemoteUserControl> CreateVisualizerAsync(

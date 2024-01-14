@@ -7,7 +7,8 @@ namespace VisualizerExtension;
 /// Extension entrypoint for the VisualStudio.Extensibility extension.
 /// </summary>
 [VisualStudioContribution]
-public class VisualizerExtension : Extension
+public sealed class VisualizerExtension
+    : Extension
 {
     /// <inheritdoc/>
     public override ExtensionConfiguration ExtensionConfiguration => new()

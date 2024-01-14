@@ -2,7 +2,7 @@
 
 namespace VisualizerExtension;
 
-internal class VisualizerDialog :
+internal sealed class VisualizerDialog :
     RemoteUserControl
 {
     public VisualizerDialog()
